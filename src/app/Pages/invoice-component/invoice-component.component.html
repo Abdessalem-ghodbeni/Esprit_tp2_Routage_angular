@@ -1,0 +1,26 @@
+<div class="container mt-5" *ngIf="invoice">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Facture identifiant </th>
+                <th scope="col">Date de la facture :</th>
+                <th scope="col">Montant de la facture :</th>
+                <th scope="col">Montant de la remise :</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">{{ invoice.idFacture }}</th>
+                <td>{{ invoice.dateFacture }}</td>
+                <td>{{ invoice.montantFacture }}</td>
+                <td>{{ invoice.montantRemise }}</td>
+
+            </tr>
+
+        </tbody>
+    </table>
+    <p>{{ errorMessage }}</p>
+
+
+    <a routerLink="/invoice_liste"> <button class="btn btn-primary "> Retour </button></a>
+</div>

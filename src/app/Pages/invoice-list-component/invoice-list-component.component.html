@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="d-flex flex-row justify-content-around">
+        <div class="col-6">
+            <img src="/assets/images/Payment.png" class="w-100" alt="">
+        </div>
+        <div class="col-6">
+            <div class="card w-75 mb-3 mt-5">
+                <div class="card-body">
+                    <h5 class="card-title">Liste des Factures </h5>
+                    <ul *ngFor="let items of ListeInvoice">
+                        <li>
+
+                            <div class="d-flex flex-row justify-content-align-items-start ">
+                                <p> Facture : {{items.idFacture}}</p>
+
+                                <a [routerLink]="['/invoice', items.idFacture,items.active]">Details</a>
+                                <!-- <a [routerLink]="['/invoice']"
+                                    [queryParams]="{ id: items.idFacture, active: items.active }">Details</a> -->
+
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
